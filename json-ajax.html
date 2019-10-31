@@ -16,7 +16,7 @@
         jQuery(document).ready(function(){
             $.ajax({
                 type: "GET",
-                url: "https://od.cdc.gov.tw/eic/NHI_Varicella.json",
+                url: "https://data.kcg.gov.tw/dataset/f4375239-af26-40f6-8394-d942f3ecf753/resource/ad36b1f2-8a2c-4491-a516-da607bd96c39/download/light-rail-station.json",
                 dataType: "json",
                 async: true,
                 success: function(arr) {
@@ -28,8 +28,11 @@
             
                         for(i = 0; i < arr.length; i++) {
                             out += '<tr><th scope="row">' + i + '</th><td>' +
-                            arr[i].title + "</td><td>" +
-                            arr[i].sourceWebName + "</td><td>(" +
+                            arr[i].Seq + "</td><td>" +
+                            arr[i].車站編號 + "</td><td>(" +
+							arr[i].車站中文名稱 + "</td><td>(" +
+							arr[i].Longitude + "</td><td>(" +
+							arr[i].Latitude + "</td><td>(" +
                             arr[i].startDate + " ~ " + arr[i].endDate + ")</td></tr>";
                         }
                         out += "</tbody></table>";
